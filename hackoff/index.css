@@ -1,0 +1,32 @@
+body {
+    margin: 0px !important;
+    padding: 0px !important;
+    font-family: 'Merriweather', serif;
+}
+
+.banner-p {
+    /* transform: translateY(790%); */
+    padding-top: 40vh;
+    text-align: center;
+    /* padding-left: 20px;
+    padding-right: 20px;  */
+    font-weight: 600; 
+    font-size: 280%;
+    /* word-wrap: wrap; */
+    word-spacing: 20px;
+    font-family: 'Montserrat', sans-serif;
+    /* position: relative; */
+    transform: translateZ(100px) !important;
+}
+
+nav{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
