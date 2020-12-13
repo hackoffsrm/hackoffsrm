@@ -9,8 +9,9 @@ Our project solves all the problems keeping in sustainable development into acco
 ## Technologies Used
 - Arduino
 - HTML
+- C
 - CSS
 - JAVASCRIPT
-- FIREBASE
+- JQUERY
 - OTHER WEBDEV TOOLS
 
