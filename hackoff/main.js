@@ -13,7 +13,7 @@ function getvalues(e) {
       var a = hms.split(':')
       var seconds = (a[0]) * 60 * 60 + (a[1]) * 60;
       if (seconds == total_sec) {
-        alert('yo')
+        alert('Time Up')
       }
     }
     else {
