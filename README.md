@@ -9,8 +9,14 @@ Our project solves all the problems keeping in sustainable development into acco
 ## Technologies Used
 - Arduino
 - HTML
+- C
 - CSS
 - JAVASCRIPT
 - FIREBASE
 - OTHER WEBDEV TOOLS
-
+## Connecting arduino(hardware) with database
+Whenever you click on a button in the HTML page a GET request is sent to the ESP8266
+1. To know when request is in progress, the Arduino looks for the string “+IPD,” in the Serial buffer using Serial.find
+2. The code then reads the next character (the connection id, 0 in the example request above). The connection ID is needed to know which connection to close (different simultaneous requests have a different ID).
+3. Next we get the pin number by looking for the string “?pin=” in the serial buffer, once again using Serial.find
+4. Now that we have the pin number we know which pin to toggle
