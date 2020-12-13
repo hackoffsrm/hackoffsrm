@@ -1,59 +1,33 @@
-// Initialize Firebase (ADD YOUR OWN DATA)
-var config = {
-    apiKey: "AIzaSyBTY8BQ_O_q7TF1dfnq2rAaqouIxM4YjDA",
-    authDomain: "hackoff-a0dcf.firebaseapp.com",
-    databaseURL: "https://hackoff-a0dcf-default-rtdb.firebaseio.com",
-    projectId: "hackoff-a0dcf",
-    storageBucket: "hackoff-a0dcf.appspot.com",
-    messagingSenderId: "195466946540"
-};
-firebase.initializeApp(config);
+const { time } = require("console");
+const { setInterval } = require("timers");
 
-// Reference messages collection
-var messagesRef = firebase.database().ref('messages');
-
-// Listen for form submit
-document.getElementById('contactForm').addEventListener('submit', submitForm);
-
-// Submit form
-function submitForm(e){
-  e.preventDefault();
-
-  // Get values
-  var name = getInputVal('name');
-  var company = getInputVal('sname');
-  var email = getInputVal('email');
-  var phone = getInputVal('phone');
-  var message = getInputVal('timee');
-
-  // Save message
-  saveMessage(name, company, email, phone, message);
-
-  // Show alert
-  document.querySelector('.alert').style.display = 'block';
-
-  // Hide alert after 3 seconds
-  setTimeout(function(){
-    document.querySelector('.alert').style.display = 'none';
-  },3000);
-
-  // Clear form
-  document.getElementById('contactForm').reset();
-}
-
-// Function to get get form values
-function getInputVal(id){
-  return document.getElementById(id).value;
-}
-
-// Save message to firebase
-function saveMessage(name, company, email, phone, message){
-  var newMessageRef = messagesRef.push();
-  newMessageRef.set({
-    name: name,
-    company:company,
-    email:email,
-    phone:phone,
-    message:message
-  });
+function getvalues(e) {
+  while (true) {
+    if (e.stime.value > e.sstime.value) {
+      var d = new Date();
+      var hrs = d.getHours();
+      var mins = d.getMinutes();
+      var sec = d.getSeconds();
+      total_sec = hrs * 3600 + mins * 60 + sec
+      var hms = String(e.stime.value)
+      var a = hms.split(':')
+      var seconds = (a[0]) * 60 * 60 + (a[1]) * 60;
+      if (seconds == total_sec) {
+        alert('yo')
+      }
+    }
+    else {
+      var d = new Date();
+      var hrs = d.getHours();
+      var mins = d.getMinutes();
+      var sec = d.getSeconds();
+      total_sec = hrs * 3600 + mins * 60 + sec
+      var hms = String(e.sstime.value)
+      var a = hms.split(':')
+      var seconds = (a[0]) * 60 * 60 + (a[1]) * 60;
+      if (seconds == total_sec) {
+        $.get("http://192.168.4.1:80/", {pin:p});
+      }
+    }
+  }
 }
