@@ -1,13 +1,21 @@
 
 
+
 .container {
 	max-width:400px;
 	width:100%;
-
+	background: #833ab4;  
+background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
+background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
 	position:relative;
 }
+.form1{
+	background: #34e89e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+}
+#contact input[type="text"], #contact input[type="time"], #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
 
 #contact {
 	background:fade(#F9F9F9,85);
@@ -15,17 +23,17 @@
 	margin:80px 0;
 }
 
-#contact h3 {
+#contact h1 {
 	color: #000;
 	display: block;
 	font-size: 30px;
 	font-weight: 400;
 }
 
-#contact h4 {
+#contact h2 {
 	margin:5px 0 15px;
 	display:block;
-	font-size:13px;
+	font-size:20px;
 }
 
 fieldset {
@@ -36,7 +44,7 @@ fieldset {
 	width: 100%;
 }
 
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+#contact input[type="text"], #contact input[type="time"]{
 	width:100%;
 	border:1px solid #CCC;
 	background:#FFF;
@@ -44,18 +52,14 @@ fieldset {
 	padding:10px;
 }
 
-#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+#contact input[type="text"]:hover, #contact input[type="time"]:hover{
 	-webkit-transition:border-color 0.3s ease-in-out;
 	-moz-transition:border-color 0.3s ease-in-out;
 	transition:border-color 0.3s ease-in-out;
 	border:1px solid #AAA;
 }
 
-#contact textarea {
-	height:100px;
-	max-width:100%;
-  resize:none;
-}
+
 
 #contact button[type="submit"] {
 	cursor:pointer;
@@ -70,7 +74,7 @@ fieldset {
 }
 
 #contact button[type="submit"]:hover {
-	background:#09C;
+	background:#dd3e54;
 	-webkit-transition:background 0.3s ease-in-out;
 	-moz-transition:background 0.3s ease-in-out;
 	transition:background-color 0.3s ease-in-out;
@@ -84,6 +88,7 @@ fieldset {
 }
 ::-webkit-input-placeholder {
  color:#888;
+ font-size: 14px;
 }
 :-moz-placeholder {
  color:#888;
