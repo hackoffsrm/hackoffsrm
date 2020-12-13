@@ -27,8 +27,8 @@
         <canvas class="background"></canvas>
        <p class="banner-p"><strong style="font-size: 115%;">Insert project name here</strong> </p>
     </div>
-<!--<div class="form1" style="background-image: url('bgp.jpeg');">-->
-  <div class="form1">
+<div class="form1" id="contactForm">
+  <!--<div class="form1">-->
   <canvas class="background"></canvas>
     <div class="container" style="margin-top: 30%;">  
         <form id="contact" action="" method="post">
@@ -36,12 +36,24 @@
           <h1 class="w3-container w3-center w3-animate-zoom">Hey :)<br> We're glad to see you here !</h1>
           <h2>Enter your shop details below!</h2><br>
           <fieldset>
-            <label for="name" style="font-size: 18px">What's your shop's name?</label>
-            <input placeholder="Shop Name Here!" id="name" type="text" tabindex="1" required autofocus>
+            <label for="name" style="font-size: 18px">What's your name?</label>
+            <input placeholder="Your Name Here!" id="name" name="name" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <label for="sname" style="font-size: 18px">What's your shop's name?</label>
+            <input placeholder="Shop Name Here!" id="sname" name="sname" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <label for="email" style="font-size: 18px">What's your Email ID?</label>
+            <input placeholder="Email Address Here!" id="email" name="email" type="email" tabindex="1" >
+          </fieldset>
+          <fieldset>
+            <label for="phone" style="font-size: 18px">What's your mobile number?</label>
+            <input placeholder="Your Mobile Number Here!" id="phone" name="phone" type="phone" tabindex="1" required autofocus>
           </fieldset>
           <fieldset>
             <label for="timee" style="font-size: 18px">Till when is your shop open?</label>
-            <input placeholder="Closing Time Here!" id="time" type="time" tabindex="2" required>
+            <input placeholder="Closing Time Here!" id="timee" type="time" name="timee" tabindex="2" required>
           </fieldset>
           <fieldset>
             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit Details</button>
@@ -49,6 +61,8 @@
         </form>
        </div>
         
+       <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+       <script src="./main.js"></script>
     <script src="./node_modules/particlesjs/dist/particles.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
